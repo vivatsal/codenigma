@@ -5,7 +5,7 @@ pipeline {
 //         DOCKERHUB_CREDENTIAL_ID = "dockerhub"
         IMAGE_NAME = "devops-project-image"
         CONTAINER_NAME = "devops-project"
-        GIT_REPO = "https://github.com/Himani1608/University-website.git"
+        GIT_REPO = "https://github.com/vivatsal/codenigma.git"
         GIT_BRANCH = "main"
     }
     stages {
@@ -25,7 +25,7 @@ pipeline {
         }
         stage('Deploy Docker Image') {
             steps {
-                sh "sudo docker run -it -p 287:80 --name ${CONTAINER_NAME} -d ${IMAGE_NAME}"
+                sh "sudo docker run -it -p 100:80 --name ${CONTAINER_NAME} -d ${IMAGE_NAME}"
             }
         }
     }
